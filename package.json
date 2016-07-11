@@ -1,0 +1,16 @@
+{
+  "name": "elm-remote-conf-july-2016",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "elm-make ./src/Main.elm --output ./build/main.js",
+    "start": "node ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "midi": "^0.9.4",
+    "xhr2": "^0.1.3"
+  }
+}
