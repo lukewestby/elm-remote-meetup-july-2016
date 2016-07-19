@@ -4,7 +4,9 @@
     "repository": "https://github.com/user/project.git",
     "license": "BSD3",
     "source-directories": [
-        "./src"
+        "./src/Launchpad",
+        "./src/SlackDemo",
+        "./src/LiveDemo"
     ],
     "exposed-modules": [],
     "native-modules": true,

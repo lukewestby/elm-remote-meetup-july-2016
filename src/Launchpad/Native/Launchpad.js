@@ -110,9 +110,7 @@ function renderer(io, tagger, initialVirtualNode) {
       sendEnqueued = false;
       if (midiMessages.length === 0) return;
       io.output.sendMessage([176, 0, firstBuffer ? 49 : 52]);
-      console.log('-------');
       messagesToSend.forEach(function (message) {
-        console.log(message);
         io.output.sendMessage(message);
       });
       io.output.sendMessage([176, 0, firstBuffer ? 52 : 49]);

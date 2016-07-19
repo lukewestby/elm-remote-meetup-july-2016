@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "elm-make ./src/Main.elm --output ./build/main.js",
-    "start": "node ."
+    "build:SlackDemo": "elm-make ./src/SlackDemo/Main.elm --output ./build/main-slack.js",
+    "build:LiveDemo": "elm-make ./src/LiveDemo/Main.elm --output ./build/main-live.js",
+    "start:SlackDemo": "node ./slack.js",
+    "start:LiveDemo": "node ./live.js"
   },
   "author": "",
   "license": "ISC",

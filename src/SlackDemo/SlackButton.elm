@@ -1,6 +1,6 @@
 module SlackButton exposing (Model, model, Msg, initialize, update, subscriptions, view)
 
-import Task
+import Task exposing (Task)
 import Json.Decode as Decode exposing (Decoder)
 import HttpBuilder exposing (..)
 import Time exposing (Time)
@@ -104,7 +104,7 @@ postToSlack row column token =
         slackUrl =
             HttpBuilder.url ("https://slack.com/api/chat.postMessage")
                 [ ( "token", token )
-                , ( "channel", "@slackbot" )
+                , ( "channel", "#hardware" )
                 , ( "text", ("Hello from the button at " ++ (toString ( row, column ))) )
                 , ( "username", "@luke" )
                 , ( "as_user", "true" )

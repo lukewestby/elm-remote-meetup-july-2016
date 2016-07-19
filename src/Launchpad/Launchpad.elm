@@ -3,6 +3,7 @@ module Launchpad
         ( programWithFlags
         , program
         , beginnerProgram
+        , staticProgram
         , map
         , Node
         , group
@@ -120,4 +121,13 @@ beginnerProgram app =
         , update = \msg model -> ( app.update msg model, Cmd.none )
         , view = app.view
         , subscriptions = always Sub.none
+        }
+
+
+staticProgram : Node msg -> Program Never
+staticProgram node =
+    beginnerProgram
+        { model = ()
+        , update = \_ _ -> ()
+        , view = \_ -> node
         }
